@@ -1,0 +1,87 @@
+<!doctype html>
+<head id="www-sitename-com" data-template-set="html5-reset">
+	<meta charset="utf-8">
+	<title>preferences panel</title>
+	<script src="_assets/js/prefixfree.min.js"></script>
+	<!-- CSS: with -prefix-free -->
+	<link rel="stylesheet" href="_assets/css/openlayer_style.css">
+	<style>
+		/*Google font import*/		
+		body {
+			background: url('_assets/img/bg.png') repeat;
+			font: 13px Arial, Helvetica, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		/* PREFERENCES */
+		#preferences {
+			color: #FFF;
+			margin: 0 auto;
+			width: 260px;
+		}
+		#preferences select, input, textarea {
+			color: #333;
+		}
+		#preferences h2 {
+			font-size: 1.5em;
+			font-weight: bold;
+			margin: 15px 0;
+		}
+
+		#preferences label, #preferences input, #preferences button {
+			clear: both;
+			margin: 5px 0;
+			width: 100%;
+		}
+		#preferences .results {
+			line-height: 1.5em;
+			max-height: 100px;
+			overflow: auto;
+		}
+		#preferences .results a {
+			background: white;
+			color: black;
+			padding: 0 3px;
+			text-decoration: none;
+		}
+		#preferences .results a:hover {
+			text-decoration: underline;
+		}
+		#preferences .smallmap {
+			width: 250px;
+			height: 200px;
+			border: 1px solid white;
+		}
+	</style>
+</head>
+<body>	
+<div id="preferences">
+	<h2>SEARCH IMAGES</h2>
+	<label for="locations">SEARCH LOCATIONS:</label>
+	<br />
+	<small>Click on the map to search the near locations.</small>
+	<div id="map" class="smallmap"></div>
+	<input name="locationsLat" placeholder="Latitude" type="hidden" />
+	<input name="locationsLng" placeholder="Longitude" type="hidden"/>
+	<div id="locationsResultsTitle"></div>
+	<div id="locationsResults" class="results"></div>
+	<br /><br />
+	<label for="tags">SEARCH TAGS:</label>
+	<input name="tags" placeholder="Search for a tag name"/>
+	<div id="tagsResultsTitle"></div>
+	<div id="tagsResults" class="results"></div>
+	<br /><br />
+	<label for="users">SEARCH USERS:</label>
+	<input name="users" placeholder="Search for a user name"/>
+	<div id="usersResultsTitle"></div>
+	<div id="usersResults" class="results"></div>
+	<br /><br />
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+	window.jQuery || document.write("<script src='_assets/js/jquery.js'>\x3C/script>")
+</script>
+<script src="_assets/js/OpenLayers.js"></script>
+<script src="_assets/js/functions_prefs.js"></script>
+</body>
+</html>

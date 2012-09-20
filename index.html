@@ -1,0 +1,93 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<head id="www-sitename-com" data-template-set="html5-reset">
+	<meta charset="utf-8">
+	<title>okiFu</title>
+
+	<meta name="title" content="okiFu">
+	<meta name="description" content="okiFu - Puzzle Game based on instagram images">
+
+	<meta name="google-site-verification" content="">
+	<!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
+
+	<meta name="author" content="tx2z">
+	<meta name="Copyright" content="Copyright tx2z 2011. All Rights Reserved.">
+	<meta name="DC.title" content="okiFu">
+	<meta name="DC.subject" content="okiFu - Puzzle Game based on instagram images">
+	<meta name="DC.creator" content="tx2z">
+
+	<!--  Mobile Viewport Fix -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- CSS: with -prefix-free -->
+
+	<script src="_assets/js/prefixfree.min.js"></script>
+	<link rel="stylesheet" href="_assets/css/style.css">
+</head>
+<body class="preload">
+	<header>
+		<h1>okiFu<br /><small>Puzzle Game based on instagram images</small></h1>
+		<img src="_assets/img/instaIcon.png" alt="play puzzle with instagram photos" id="iconInst" />
+		<a data-fancybox-type="iframe" href="preferences.html" class="openPref">SEARCH IMAGES</a>
+	</header>
+	<article>
+		<div class="timer"></div>
+		<div class="filters"></div>
+		<div class="gridster">
+		    <ul></ul>
+		    <div class="preGame" style="display:none;">
+		    	<a href="javascript:void(0)" class="startGame"><img src="_assets/img/play.png" alt="START GAME"></a>
+			</div>
+			<div class="clearBoth"></div>
+		</div>
+	</article>
+	<footer>
+		<p>
+			<small>okiFu - based on <a href="http://gridster.net/">gridster.js</a> and <a href="http://instagram.com/developer/">Instagram API</a></small>
+		</p>
+	</footer>
+	<div class="modal-lightsout"></div>
+	<div class="modal-profile">
+	    <h2>You win!</h2>
+	    <br /><br />
+	    <p>You've finished the okifu puzzle in <span id="timeFinish"></span></p>
+	    <p>Share it in your social networks and challenge your friends if they can improve your time!</p>
+	    <br /><br />
+		<a href="#" class="modal-social socifb" target="_blank"><img src="_assets/img/facebook.png" alt="Facebook" /></a>
+	    <a href="#" class="modal-social socitw" target="_blank"><img src="_assets/img/twitter.png" alt="Twitter" /></a>
+	    <!--<a href="#" class="modal-social socigp" target="_blank"><img src="_assets/img/googleplus.png" alt="Google+" /></a>-->
+	    <a href="#" class="modal-social sociem"><img src="_assets/img/email.png" alt="Email" /></a>
+	    <br /><br />
+	    <p>Thank you for playing okiFu puzzle :)</p>
+	    <p><a href="javascript:document.location.reload(true)">Try to impove your time</a> <a href="/">Try with another image</a></p>
+	</div>
+	<!-- here comes the javascript -->
+	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+		window.jQuery || document.write("<script src='_assets/js/jquery.js'>\x3C/script>")
+	</script>
+	<script src="_assets/js/jquery.gridster.min.js"></script>
+	<script src="_assets/js/jquery.fancybox.pack.js"></script>
+	<script src="_assets/js/functions.js"></script>
+
+	<!-- Google analytics -->
+	<script>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-7726013-17']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	</script>
+	
+</body>
+</html>
