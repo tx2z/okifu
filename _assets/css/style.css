@@ -92,6 +92,7 @@ mark {
 }
 
 header {
+	background-image: -*-linear-gradient(bottom, #507da2 0%, #3F729B 100%); /* prefixfree hack*/
 	background-image: linear-gradient(bottom, #507da2 0%, #3F729B 100%);
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
@@ -116,6 +117,7 @@ header img#iconInst {
 	top:13px;
 }
 header .openPref {
+	background-image: -*-linear-gradient(bottom, #00377d 0%, #5582a5 100%); /* prefixfree hack*/
 	background-image: linear-gradient(bottom, #00377d 0%, #5582a5 100%);
 	border: solid 1px #082848;
 	border-radius: 5px;
