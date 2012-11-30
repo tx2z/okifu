@@ -123,7 +123,14 @@
 	        click.activate();
 
 	    }
-
+	    
+		/* GET LOCATION */
+		function getNearPositions(position){
+			$("input[name=locationsLat]").val(position.coords.latitude);
+			$("input[name=locationsLng]").val(position.coords.longitude);
+			searchLocations($("input[name=locationsLat]").val(),$("input[name=locationsLng]").val());	
+		}
+		
 		/* DOCUMENT READY */
 		$(document).ready(function() {
 
@@ -145,6 +152,15 @@
 
 			$("input[name=users]").keyup(function() {
 				searchUsers($("input[name=users]").val());
+			});
+			
+			/* GET LOCATION */
+			$("#getLocation").click(function() {
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(getNearPositions);
+				}else{
+					$('#locationsResultsTitle').html('Geolocation is not supported, please try a manual search.');
+				}
 			});
 
 			/* START OPENLAYERS */
